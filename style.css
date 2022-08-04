@@ -22,6 +22,20 @@ body {
     align-items: center;
 }
 
+.container::before {
+    content: "";
+    width: 0%;
+    height: 50vh;
+    background-color: hsl(150, 100%, 66%);
+    position: absolute;
+    border-radius: 15px;
+    transition: width .2s;
+}
+
+.change.container::before {
+    width: 70%;
+}
+
 .advice-id p {
     color: hsl(150, 100%, 66%);
     text-transform: uppercase;
@@ -99,6 +113,10 @@ body {
     }
 
     .container {
+        height: 80vh;
+    }
+
+    .container::before {
         height: 80vh;
     }
 }

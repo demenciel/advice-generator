@@ -2,6 +2,7 @@ let id = 90
 let adviceID = document.querySelector('#advice-number');
 let adviceText = document.querySelector('.advice');
 let btn = document.querySelector('.dice-img');
+let container = document.querySelector('.container');
 
 function getAdvice() {
     let url = "https://api.adviceslip.com/advice";
@@ -30,6 +31,11 @@ getAdvice();
 
 btn.addEventListener('click', ()=> {
     getAdvice();
+    container.classList.add('change')
+    setTimeout(() => {
+        container.classList.remove('change')
+    }, 0500);
+    
 })
 
 
